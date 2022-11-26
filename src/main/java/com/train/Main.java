@@ -10,7 +10,7 @@ public class Main {
         System.out.println("請問有幾張是來回票?");
         int returnTicket = scanner.nextInt();
 
-        Ticket t = new Ticket(totalTicket,returnTicket);
+        Ticket t = new Ticket(totalTicket, returnTicket);
         t.singleTicket = totalTicket - returnTicket;
 
         System.out.println("總共買了幾張車票?" + totalTicket + "\n" + "有幾張來回票?" + returnTicket);

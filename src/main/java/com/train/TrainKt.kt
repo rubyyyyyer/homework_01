@@ -9,23 +9,23 @@ fun main() {
     println("請問有幾張是來回票?")
     val returnTicket = scanner.nextInt();
 
-    val t = TrainKt(totalTicket,returnTicket)
+    val t = TrainKt(totalTicket, returnTicket)
     t.setting()
     t.totalPrice()
 
 }
 
 
-class TrainKt(var totalTicket:Int, var returnTicket:Int,var singleTicket:Int=0, var singleTicketPrice:Int=0, var returnTicketPrice:Int=0, var totalPrice:Int=0) {
+class TrainKt(var totalTicket: Int, var returnTicket: Int, var singleTicket: Int = 0, var singleTicketPrice: Int = 0, var returnTicketPrice: Int = 0, var totalPrice: Int = 0) {
 
-    fun setting(){
+    fun setting() {
         singleTicket = totalTicket - returnTicket
         singleTicketPrice = 1000
-        returnTicketPrice = ((singleTicketPrice*2)*0.9).toInt()
+        returnTicketPrice = ((singleTicketPrice * 2) * 0.9).toInt()
     }
 
-    fun totalPrice(){
-        totalPrice = (singleTicket*singleTicketPrice) + (returnTicket*returnTicketPrice)
+    fun totalPrice() {
+        totalPrice = (singleTicket * singleTicketPrice) + (returnTicket * returnTicketPrice)
         println(totalPrice)
     }
 
